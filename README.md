@@ -9,6 +9,9 @@ Below is his prior Readme.md file, please read the documentation.
 If you're curious what each of these scripts do, i encourage all to open the install.sh files and dive into the code.
 You'd be surprised what you'll learn. 
 
+## Latest Added Features:
+### Webcam-Fix 
+The stock chamber camera is set to 15fps. `v4l2-ctl --list-formats-ext -d /dev/v4l/by-id/main-video0` reports 30fps as available. Lets get that framerate.
 
 Donations are definitely _not required_, however they are always appreciated.  If you'd like to donate you can do so [here](https://ko-fi.com/campbellfabrications)
 
