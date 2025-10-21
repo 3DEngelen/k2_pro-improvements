@@ -8,9 +8,11 @@ If you're curious what each of these scripts do, i encourage all to open the ins
 You'd be surprised what you'll learn. 
 
 # Latest Added Features:
-## Webcam-Fix 17-10-25
+## Webcam-FPS 17-10-25
 The stock chamber camera is set to 15fps. `v4l2-ctl --list-formats-ext -d /dev/v4l/by-id/main-video0` reports 30fps as available. Lets get that framerate.
 
+## Moonraker Wheels & pip  
+Added `--prefer-binary` to `features/moonraker.sh`
 
 
 
