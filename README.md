@@ -7,25 +7,6 @@ In the `features` folder you will find install scripts for each of the features 
 If you're curious what each of these scripts do, i encourage all to open the install.sh files and dive into the code.
 You'd be surprised what you'll learn. 
 
-# Latest Added Features:
-## Webcam-FPS 17-10-25
-The stock chamber camera is set to 15fps. `v4l2-ctl --list-formats-ext -d /dev/v4l/by-id/main-video0` reports 30fps as available. Lets get that framerate.
-
-## Moonraker Wheels & pip  
-Added `--prefer-binary` to `features/moonraker.sh`
-
-
-
-
-
-
-Donations are definitely _not required_, however they are always appreciated.  If you'd like to donate you can do so [here](https://ko-fi.com/campbellfabrications)
-
-
-Below is his prior Readme.md file, please read the documentation.
-
-
-# K2 Improvements
 
 ## DISCLAIMER
 
@@ -79,7 +60,17 @@ You are still welcome to hand pick which features you want to install.
 
 ## Donations
 
-Donations are definitely _not required_, they are appreciated.  If you'd like to donate you can do so [here for Jamin](https://ko-fi.com/jamincollins).
+Donations are definitely _not required_, however they are always appreciated.  If you'd like to donate you can do so [here](https://ko-fi.com/campbellfabrications)
+
+
+# Latest Added Features:
+## Webcam-FPS 17-10-25
+The stock chamber camera is set to 15fps. `v4l2-ctl --list-formats-ext -d /dev/v4l/by-id/main-video0` reports 30fps as available. Lets get that framerate.
+
+## Moonraker Wheels & pip  
+Added `--prefer-binary` to `features/moonraker.sh`
+
+
 
 
 ## Features
