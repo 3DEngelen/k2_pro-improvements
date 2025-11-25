@@ -53,7 +53,7 @@ fetch_moonraker() {
     if [ -d moonraker/.git ]; then
         git -C moonraker pull
     else
-        git clone https://github.com/jamincollins/moonraker.git
+        git clone https://github.com/CampbellFabrications/moonraker.git
     fi
     # ensure we are on the k2 branch
     git -C moonraker checkout k2
