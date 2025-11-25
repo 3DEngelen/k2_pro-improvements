@@ -11,7 +11,7 @@ if [ ! -d cartographer-klipper/.git ]; then
     if [ -d cartographer-klipper ]; then
         rm -rf cartographer-klipper
     fi
-    git clone https://github.com/jamincollins/cartographer-klipper.git
+    git clone https://github.com/CampbellFabrications/cartographer-klipper.git
     git -C cartographer-klipper checkout k2
 fi
 
