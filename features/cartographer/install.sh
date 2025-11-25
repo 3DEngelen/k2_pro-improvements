@@ -11,7 +11,7 @@ if [ ! -d cartographer-klipper/.git ]; then
     if [ -d cartographer-klipper ]; then
         rm -rf cartographer-klipper
     fi
-    git clone https://github.com/CampbellFabrications/cartographer-klipper.git
+    git clone https://github.com/jamincollins/cartographer-klipper.git
     git -C cartographer-klipper checkout k2
 fi
 
@@ -83,7 +83,7 @@ python ${SCRIPT_DIR}/../../scripts/ensure_included.py ~/printer_data/config/cust
 # make this a patch
 cd ~/klipper/klippy/extras
 #patch < ${SCRIPT_DIR}/homing.patch
-# replace conditional prtouch_v3 lookup with scanner lookup on Line 46 1.1.4.8
+# replace conditional prtouch_v3 lookup with scanner lookup
 sed -i "s|self\.prtouch_v3 = self\.printer\.lookup_object('prtouch_v3') if self\.printer\.objects\.get('prtouch_v3') else None|self.prtouch_v3 = self.printer.lookup_object('scanner')|" homing.py || true
 # replace direct prtouch_v3 lookup with scanner lookup (legacy pattern)
 sed -i "s|self\.prtouch_v3 = printer\.lookup_object('prtouch_v3')|self.prtouch_v3 = self.printer.lookup_object('scanner')|" homing.py || true
