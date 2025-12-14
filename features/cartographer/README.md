@@ -12,7 +12,7 @@ While 0.01% may not seem like a frequent failure it is enough to both erode conf
 
 ### Detail
 
-The original K2 firmware (1.0.x through 1.1.1.x) limited the bed meshes to _exactly_ 9x9.  With a 350x350 (actually 370x370) build plate, this meant the distance between probed points was: 42.5 (taken directly from the mesh)
+The original K2 firmware (1.0.x through 1.1.1.x) limited the bed meshes to _exactly_ 9x9.  With a 300x300 build plate, this meant the distance between probed points was: 37.5 (taken directly from the mesh)
 
 With current firmware versions (1.1.2.6 as of this writing) the 9x9 mesh limitation has been removed and other sizes are supported.  However, even with the current firmware, the maximum mesh is 25x25, which means a distance of: 14.1667 mm (taken directly from the mesh)
 

@@ -1,7 +1,8 @@
-# K2 Improvements Script Maintainers Fork
+# K2 Pro Improvements Script
 
-JaminCollins has archived his repo, I have the cartographer as well as use the k2-improvements script on my K2 Plus.
-I'll be updating this repo with any bug reports that i can reproduce and hopefully keep this project going into newer firmware versions released by Creality.
+This is a fork of JaminCollins' K2 improvements project, adapted for the **K2 Pro**.
+
+This repository includes install scripts for various improvements and features for the K2 Pro.
 
 In the `features` folder you will find install scripts for each of the features being installed, if desired to run separately.
 If you're curious what each of these scripts do, i encourage all to open the install.sh files and dive into the code.
@@ -26,13 +27,13 @@ It is recommend to perform a factory reset prior to install to avoid potential c
 echo "all" | /usr/bin/nc -U /var/run/wipe.sock
 ```
 
-1. Enable root access on the K2 Plus by going to Settings, General tab and root on the physical screen. Take note of the password.
-1. Download the latest bootstrap release from [https://github.com/campbellfabrications/k2-improvements/releases](https://github.com/campbellfabrications/k2-improvements/releases) and extract the folder.
-1. To install the bootstrap, connect to your K2 Plus's Fluid interface via browser **http://PrinterIP:4408**
+1. Enable root access on your K2 Pro by going to Settings, General tab and root on the physical screen. Take note of the password.
+1. Download the latest bootstrap release from [https://github.com/3DEngelen/k2_pro-improvements/releases](https://github.com/3DEngelen/k2_pro-improvements/releases) and extract the folder.
+1. To install the bootstrap, connect to your K2 Pro's Fluid interface via browser **http://PrinterIP:4408**
 1. Unzip the downloaded bootstrap folder and upload the extracted bootstrap folder by going to Configuration **{...}**, **+**, **Upload Folder**, and selecting the extracted bootstrap folder.
     ![image](https://github.com/user-attachments/assets/3d242efc-4cf8-412d-b4b0-59507720f5ad)
-1. SSH to the K2 Plus using any terminal tool (e.g. PuTTy) using the printers ip adress, port 22, user "root" and the password noted in step 1.
-1. If you execute a wipe, you will need to go through setup on the K2 screen and complete all the way through creality cloud connection. This will give you the wifi/network connection that you will need and connect appropriately to creality cloud. Stop at the calibration, you can do this later.
+1. SSH to your K2 Pro using any terminal tool (e.g. PuTTy) using the printers ip adress, port 22, user "root" and the password noted in step 1.
+1. If you execute a wipe, you will need to go through setup on the K2 Pro screen and complete all the way through creality cloud connection. This will give you the wifi/network connection that you will need and connect appropriately to creality cloud. Stop at the calibration, you can do this later.
 1. To start the boostrap install paste into the terminal `sh /mnt/UDISK/printer_data/config/bootstrap/bootstrap.sh` and hit enter.
 1. Once the setup completes, it will log you out of your terminal and you will need to log back in.
 
@@ -44,11 +45,11 @@ The unified installer will understand inter option dependencies and ensure they 
 
 For now, there are two default installations:   **Note either option will take some time and seem to hang at times. Be patient as it is moving lots of files and creating venvs for klipper and moonraker full installs
 
-* Option 1: `gimme-the-jamin.sh` - Used to install carto **NOTE MUST HAVE CARTO FLASHED AND PLUGGED IN AND READY TO GO** by following instructions [here](https://github.com/campbellfabrications/k2-improvements/blob/main/features/cartographer/firmware/README.md) first.
+* Option 1: `gimme-the-jamin.sh` - Used to install carto **NOTE MUST HAVE CARTO FLASHED AND PLUGGED IN AND READY TO GO** by following instructions [here](https://github.com/3DEngelen/k2_pro-improvements/blob/main/features/cartographer/firmware/README.md) first.
 
     To run, use the terminal command `sh /mnt/UDISK/root/k2-improvements/gimme-the-jamin.sh`
 
-    After install you will need to calibrate the carto by following instructions [here](https://github.com/campbellfabrications/k2-improvements/blob/main/features/cartographer/SETUP.md)
+    After install you will need to calibrate the carto by following instructions [here](https://github.com/3DEngelen/k2_pro-improvements/blob/main/features/cartographer/SETUP.md)
 
 * Option 2: `no-carto.sh` - Use this if you aren't going to use a carto, or don't have your carto yet.
 
@@ -66,7 +67,7 @@ Donations are definitely _not required_, however they are always appreciated.  I
 # Latest Added Features:
 
 ## Resonance Tester
-Added the Resonance Tester code from Jacobean. Here's it's [Readme](https://github.com/campbellfabrications/k2-improvements/blob/main/features/resonance-tester/README.md) file.
+Added the Resonance Tester code from Jacobean. Here's it's [Readme](https://github.com/3DEngelen/k2_pro-improvements/blob/main/features/resonance-tester/README.md) file.
 
 ## Webcam-FPS 17-10-25
 The stock chamber camera is set to 15fps. `v4l2-ctl --list-formats-ext -d /dev/v4l/by-id/main-video0` reports 30fps as available. Lets get that framerate.
@@ -98,6 +99,16 @@ And a few quality of life improvement macros
 ### Bed Leveling
 
 Sadly, many of the K2 beds resemble a taco or valley.  In the [bed_leveling](bed_leveling) folder you will find a python based script and short writeup on how to apply aluminium tape to shim the bed.
+
+## K2 Pro Specifications
+
+| Parameter | Value |
+|-----------|-------|
+| **Build Volume** | 300×300 mm |
+| **Max Nozzle Temp** | 300°C |
+| **Heater Power** | 70W |
+| **Cooling Fan** | Single auxiliary |
+| **Chamber Exhaust** | 1 fan |
 
 ## Credits
 
